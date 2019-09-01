@@ -1,6 +1,6 @@
 {
   "name": "pegjs-syntactic-actions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A PEG.js plugin to replace actions by syntactic trees",
   "main": "index.js",
   "scripts": {
