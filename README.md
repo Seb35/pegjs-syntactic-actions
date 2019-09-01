@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Seb35/pegjs-syntactic-actions.svg?branch=master)](https://travis-ci.org/Seb35/pegjs-syntactic-actions)
+
 pegjs-syntactic-actions
 =======================
 
@@ -95,9 +97,11 @@ In the second argument `options` of `pegjs.generate`, add the main object
 }
 ```
 
-Optionally, it can be given an argument with options. Currently only one is supported:
+#### Options
 
-* `ignoredRules`: array of rules names to be completely ignored, they will keep their original actions.
+It can be given an argument `options` in the constructor. Currently only one is supported:
+
+* `ignoredRules`: array of rules names to be completely ignored (these rules will keep their original actions).
 
 For instance:
 
