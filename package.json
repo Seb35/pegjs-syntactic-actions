@@ -1,0 +1,28 @@
+{
+  "name": "pegjs-syntactic-actions",
+  "version": "0.1.0",
+  "description": "A PEG.js plugin to replace actions by syntactic trees",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seb35/pegjs-syntactic-actions"
+  },
+  "keywords": [
+    "pegjs"
+  ],
+  "author": "Seb35",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seb35/pegjs-syntactic-actions/issues"
+  },
+  "homepage": "https://github.com/seb35/pegjs-syntactic-actions#readme",
+  "dependencies": {
+    "pegjs": "^0.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.3.0"
+  }
+}
