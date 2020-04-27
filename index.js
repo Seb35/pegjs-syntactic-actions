@@ -10,6 +10,9 @@
  *
  * See docs/schema.json for the JSON schema of the output modified by this parser.
  */
+
+"use strict";
+
 function SyntacticActionsPlugin( options ) {
 
   this.options = options;

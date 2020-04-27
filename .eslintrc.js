@@ -16,7 +16,7 @@ module.exports = {
   },
 
   parserOptions: {
-    "sourceType": "module"
+    "sourceType": "script"
   },
 
   /**
@@ -243,7 +243,16 @@ module.exports = {
     // require let or const instead of var
      "no-var": ["error"]
 
-  }
+  },
+
+  overrides: [
+    {
+      "files": "tests/*.js",
+      "env": {
+        "mocha": true
+      }
+    }
+  ]
 };
 
 // vim: set ts=2 sw=2 sts=2 et:
