@@ -110,3 +110,7 @@ For instance:
   plugins: [ new SyntacticActionsPlugin( { ignoredRules: [ "rule1" ] } ) ]
 }
 ```
+
+#### Documentation
+
+A JSON schema is included in the `docs` directory, documenting the output of the parser modified by this plugin. Obviously, if there are ignored rules, these rules can detract the validity of the JSON schema.

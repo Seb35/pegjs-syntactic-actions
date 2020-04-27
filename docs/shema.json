@@ -1,0 +1,64 @@
+{
+	"$schema": "http://json-schema.org/schema#",
+	"description": "Schema of the tree constructed by this PEG.js plugin. Each node contains one subnode (case of a terminal string, alternatives, or quantity '?') or an array of subnodes (case of sequences, quantities '+' or '*').",
+	"type": "object",
+	"additionalProperties": false,
+	"properties": {
+		"rule": {
+			"type": "string",
+			"description": "Name of the rule capturing the current node.",
+			"required": true
+		},
+		"text": {
+			"type": "string",
+			"description": "Text captured in the current node.",
+			"required": true
+		},
+		"start": {
+			"type": "integer",
+			"description": "Start index of the text captured in the current node (0-based).",
+			"required": true
+		},
+		"end": {
+			"type": "integer",
+			"description": "End index of the text captured in the current node (0-based).",
+			"required": true
+		},
+		"children": {
+			"anyOf": [
+				{
+					"$ref": "#",
+					"description": "A subnode corresponding to some rule."
+				},
+				{
+					"type": "string",
+					"description": "A terminal string."
+				},
+				{
+					"type": "null",
+					"description": "Nothing captured in the case of a quantity '?'."
+				},
+				{
+					"type": "array",
+					"description": "Subnodes composing the current node.",
+					"items": {
+						"anyOf": [
+							{
+								"$ref": "#",
+								"description": "A subnode corresponding to some rule."
+							},
+							{
+								"type": "string",
+								"description": "A terminal string."
+							},
+							{
+								"type": "null",
+								"description": "Nothing captured in the case of a quantity '?'"
+							}
+						]
+					}
+				}
+			]
+		}
+	}
+}

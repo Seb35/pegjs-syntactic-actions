@@ -7,6 +7,8 @@
  *
  * The resulting grammar is garanteed without bugs inside the actions (but it
  * can remain bugs inside the grammar itself).
+ *
+ * See docs/schema.json for the JSON schema of the output modified by this parser.
  */
 function SyntacticActionsPlugin( options ) {
 
