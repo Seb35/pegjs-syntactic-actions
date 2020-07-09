@@ -31,7 +31,7 @@ function syntacticActions( options ) {
   return function( ast ) {
 
     function recursiveRemoveAction( rule ) {
-      if( rule.type === "action" || rule.type === "labeled" ) {
+      while( rule.type === "action" || rule.type === "labeled" ) {
         rule = rule.expression;
       }
       if( rule.expression ) {
