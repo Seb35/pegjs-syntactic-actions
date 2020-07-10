@@ -99,6 +99,24 @@ suite( "Base", function() {
 
   } );
 
+  test( "Rule with label then action (bug fixed in 9c01626 published in 0.1.4)", function() {
+
+    const grammar = "entry = a : ( b : \"a\" { return b; } )";
+
+    assert.deepEqual(
+      pegjs.generate( grammar ).parse( "a" ),
+      "a",
+      "Without the plugin"
+    );
+
+    assert.deepEqual(
+      pegjs.generate( grammar, { plugins: [ new SyntacticActionsPlugin() ] } ).parse( "a" ),
+      { rule: "entry", text: "a", start: 0, end: 1, children: "a" },
+      "With the plugin"
+    );
+
+  } );
+
 } );
 
 // vim: set ts=2 sw=2 sts=2 et:
